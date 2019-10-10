@@ -5,20 +5,11 @@
     </div>
 
     <div class="intro">
-
         {{ with .Site.Params.profilePic }} <img class="profile" src="{{ . }}"> {{ end }}
-
         <h1>{{ .Site.Title }}</h1>
-
         <h2>{{ markdownify .Site.Params.Description }}</h2>
-
-        {{ with .Content }}
-            <div class="homepage-content text-justify">
-                {{ . }}
-            </div>
-        {{ end }}
+        {{ with .Content }} <div class="homepage-content text-justify">{{ . }}</div> {{ end }}
     </div>
-
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
